@@ -74,6 +74,22 @@ After anonymization, the workbook was fully tested to ensure:
 
 ---
 
+# Design Decisions
+
+The anonymization process was performed using stable aliases rather than random replacement values.
+
+This approach preserves relational integrity across worksheets while ensuring that:
+
+- lookup formulas continue to function,
+- validation logic remains accurate,
+- duplicate detection is preserved,
+- calculations remain unchanged, and
+- no employee or client can be directly identified.
+
+This mirrors the type of data masking commonly performed when preparing production data for testing, demonstrations, or training environments.
+
+---
+
 # Result
 
 The portfolio workbook represents a fully functional, anonymized subset of the production payroll system.
